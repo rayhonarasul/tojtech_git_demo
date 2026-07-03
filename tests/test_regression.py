@@ -25,3 +25,4 @@ class TestEndToEnd(BaseClass):
         self.driver.find_element(By.CSS_SELECTOR, "#Field-numberInput").send_keys("4242") #input number into card number box
         self.driver.switch_to.default_content() #switch out of the frame
         self.driver.find_element(By.XPATH, "//span[text()='Place Order']").click()
+        print("This is a newly created message for git session.")
