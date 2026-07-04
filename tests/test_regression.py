@@ -26,3 +26,4 @@ class TestEndToEnd(BaseClass):
         self.driver.switch_to.default_content() #switch out of the frame
         self.driver.find_element(By.XPATH, "//span[text()='Place Order']").click()
         print("This is a newly created message for git session.")
+        print("New changes by American guy.")
