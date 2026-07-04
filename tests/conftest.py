@@ -9,9 +9,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 def setup(request): #request is a built-in object that is used to configure the project, provides useful info
     option = Options()
     option.add_experimental_option("detach", True)
+    option.add_argument("start-maximized")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
-    driver.maximize_window()
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(15)
     driver.get("http://staging.shopping.beeyor.com/shop")
     request.cls.driver = driver #request allows to create customized properties , cls stands for class
     #the above line is responsible for setting the driver's configurations on the class level then pass it to fixture
